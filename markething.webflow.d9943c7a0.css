@@ -4824,7 +4824,7 @@ blockquote {
 
 .face-08 {
   transform-style: preserve-3d;
-  background-image: url("https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/666209c4cb4e6529596b8508_image-05.webp");
+  background-image: url("9.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4844,7 +4844,7 @@ blockquote {
 }
 
 .face-04 {
-  background-image: url("https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/66620bc4685d1955e79f8b4e_image-01.webp");
+  background-image: url("4.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4862,7 +4862,7 @@ blockquote {
 }
 
 .face-02 {
-  background-image: url("https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/666209c43c9aa29768029c2d_image-03.webp");
+  background-image: url("8.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4877,7 +4877,7 @@ blockquote {
 
 .face-03 {
   transform-style: preserve-3d;
-  background-image: url("https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/666209c4fe1cf23a9923614d_image-06.webp");
+  background-image: url("3.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4892,7 +4892,7 @@ blockquote {
 
 .face-05 {
   transform-style: preserve-3d;
-  background-image: url("https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/666209c50797210dc93e5965_image-07.webp");
+  background-image: url("5.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4907,7 +4907,7 @@ blockquote {
 
 .face-06 {
   transform-style: preserve-3d;
-  background-image: url("https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/666209c434b5039ec31c72df_image-02.webp");
+  background-image: url("6.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4920,7 +4920,7 @@ blockquote {
 .face-01 {
   z-index: 1;
   transform-style: preserve-3d;
-  background-image: url("https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/666209c5480b9fa1083606af_image-04.webp");
+  background-image: url("2.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4934,7 +4934,7 @@ blockquote {
 
 .face-07 {
   transform-style: preserve-3d;
-  background-image: url("https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/66620bc7723300c1a7df6c39_image-08.webp");
+  background-image: url("7.png");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5351,9 +5351,9 @@ blockquote {
   flex: none;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(25, 150px);
-width: auto; 
-height: 150px;
-margin-top: 10px;
+  width: auto;
+  height: 150px;
+  margin-top: 10px;
 }
 
 .partner-item {
