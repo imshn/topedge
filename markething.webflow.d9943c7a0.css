@@ -5346,14 +5346,12 @@ blockquote {
 }
 
 .partner-component-grid {
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
+  grid-column-gap: 4rem;
+  grid-row-gap: 4rem;
   flex: none;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(25, 150px);
-  width: auto;
-  height: 150px;
-  margin-top: 10px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
 }
 
 .partner-item {
