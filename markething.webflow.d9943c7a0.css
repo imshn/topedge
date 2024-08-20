@@ -5462,7 +5462,6 @@ blockquote {
   justify-content: center;
   align-items: flex-start;
   width: 9rem;
-  height: 1.35rem;
   display: block;
   position: relative;
   overflow: hidden;
@@ -5477,7 +5476,7 @@ blockquote {
   color: var(--white);
   text-transform: uppercase;
   width: 9rem;
-  height: 1.35rem;
+ 
   font-size: 1.35rem;
   font-weight: 500;
   line-height: 1;
