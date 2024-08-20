@@ -88,6 +88,38 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
+
+        .slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    animation: slide 25s linear infinite;
+    margin-top: 20px;
+}
+
+.slider img {
+    height: 150px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 768px) {
+    .slider img {
+        height: 80px;
+    }
+}
     </style>
    
     <script
@@ -457,6 +489,8 @@
                             <div class="face-06"></div>
                             <div class="face-07"></div>
                             <div class="face-08"></div>
+                            
+
                         </div>
                     </div>
                 </div>
@@ -557,36 +591,56 @@
                 </div>
             </div>
         </header>
+
+
+<section>
+    <div class="slider-container">
+        <div class="slider">
+            <!-- Repeat this img element 25 times with different src attributes -->
+            <img src="temw website/279301264_4956484034417813_7035296213569531838_n.jpg" alt="Image 1">
+            <img src="temw website/25.png" alt="Image 2">
+            <img src="temw website/24.png" alt="Image 3">
+            <img src="temw website/19.png" alt="Image 4">
+            <img src="temw website/Flagship24.png" alt="Image 5">
+            <img src="temw website/12.png" alt="Image 6">
+            <img src="temw website/21.png" alt="Image 7">
+            <img src="temw website/14.png" alt="Image 8">
+            <img src="temw website/26.png" alt="Image 9">
+            <img src="temw website/300374318_398874039026880_6624613955986407067_n.jpg" alt="Image 10">
+            <img src="temw website/bakers.png" alt="Image 11">
+            <img src="temw website/c.png" alt="Image 12">
+            <img src="temw website/d.png" alt="Image 13">
+            <img src="temw website/Flagship24 (1).png" alt="Image 14">
+            <img src="temw website/jpa post 2.png" alt="Image 15">
+            <img src="temw website/Malshetwar .png" alt="Image 16">
+            <img src="temw website/SAPNA Décorh.png" alt="Image 17">
+           
+        </div>
+    </div>
+</section>
+
+
+
         <section class="section-home-partners">
             <div class="padding-global">
                 <div class="container-large">
                     <div class="partner-carousel">
                         <div class="partner-carousel-inner">
                             <!-- First set of logos -->
-                            <div class="partner-item"><img src="temw website/279301264_4956484034417813_7035296213569531838_n.jpg" alt="Partner 6" class="partner-logo"></div>
+                            
+                            <!-- <div class="partner-item"><img src="temw website/279301264_4956484034417813_7035296213569531838_n.jpg" alt="Partner 6" class="partner-logo"></div>
                             <div class="partner-item"><img src="temw website/25.png" alt="Partner 4" class="partner-logo"></div>
                             <div class="partner-item"><img src="temw website/24.png" alt="Partner 3" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/17.png" alt="Partner 5" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/18.png" alt="Partner 6" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/19.png" alt="Partner 7" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/20.png" alt="Partner 8" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/22.png" alt="Partner 9" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/23.png" alt="Partner 10" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/27.png" alt="Partner 11" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/29.png" alt="Partner 12" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/30.png" alt="Partner 13" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/31.png" alt="Partner 14" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/Flagship2x4.png" alt="Partner 15" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/Jaju Sir post (1).jpg" alt="Partner 16" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/sagar.png" alt="Partner 17" class="partner-logo"></div>
+                            <div class="partner-item"><img src="temw website/19.png" alt="Partner 8" class="partner-logo"></div>
+                            <div class="partner-item"><img src="temw website/Flagship24.png" alt="Partner 9" class="partner-logo"></div> -->
+                
                             
                             
                             <!-- Duplicate set of logos for seamless looping -->
-                            <div class="partner-item"><img src="temw website/12.png" alt="Partner 1" class="partner-logo"></div>
+                           
+                            <!-- <div class="partner-item"><img src="temw website/12.png" alt="Partner 1" class="partner-logo"></div>
                             <div class="partner-item"><img src="temw website/21.png" alt="Partner 2" class="partner-logo"></div>
                             <div class="partner-item"><img src="temw website/14.png" alt="Partner 1" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/15.png" alt="Partner 2" class="partner-logo"></div>
-                            <div class="partner-item"><img src="temw website/16.png" alt="Partner 3" class="partner-logo"></div>
                             <div class="partner-item"><img src="temw website/26.png" alt="Partner 5" class="partner-logo"></div>
                             <div class="partner-item"><img src="temw website/300374318_398874039026880_6624613955986407067_n.jpg" alt="Partner 7" class="partner-logo"></div>
                             <div class="partner-item"><img src="temw website/bakers.png" alt="Partner 8" class="partner-logo"></div>
@@ -597,59 +651,77 @@
                             <div class="partner-item"><img src="temw website/Malshetwar .png" alt="Partner 13" class="partner-logo"></div>
                             <div class="partner-item"><img src="temw website/SAPNA Décorh.png" alt="Partner 14" class="partner-logo"></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- <div class="padding-section-medium">
                         <div class="partner-row-wrapper ">
                             <div style="transform: translate3d(-91.223%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;"
                                 class="w-layout-grid partner-component-grid">
-                                <div id="w-node-bc64287c-5969-65bf-43fc-f38d28d40d1d-f023ed69" class="partner-item"><img
-                                        src="temw website/25
-                                        .png" loading="lazy" alt="" class="partner-logo"
-                                        style="filter: invert(0);"></div>
+
+                                        <div id="w-node-_3b89a2bc-39de-b416-fa7d-e9db74861a1d-f023ed69" class="partner-item">
+                                            <img src="temw website/279301264_4956484034417813_7035296213569531838_n.jpg" loading="lazy" alt="" class="partner-logo"
+                                                style="filter: invert(0);">
+                                        </div>
+                                        <div id="w-node-_3b89a2bc-39de-b416-fa7d-e9db74861a1d-f023ed69" class="partner-item">
+                                            <img src="temw website/25.png" loading="lazy" alt="" class="partner-logo"
+                                                style="filter: invert(0);">
+                                        </div>
+                                        <div id="w-node-_3b89a2bc-39de-b416-fa7d-e9db74861a1d-f023ed69" class="partner-item">
+                                            <img src="temw website/24.png" loading="lazy" alt="" class="partner-logo"
+                                                style="filter: invert(0);">
+                                        </div>
+                                        <div id="w-node-_3b89a2bc-39de-b416-fa7d-e9db74861a1d-f023ed69" class="partner-item">
+                                            <img src="temw website/19.png" loading="lazy" alt="" class="partner-logo"
+                                                style="filter: invert(0);">
+                                        </div>
+                                        <div id="w-node-_3b89a2bc-39de-b416-fa7d-e9db74861a1d-f023ed69" class="partner-item">
+                                            <img src="temw website/Flagship24.png" loading="lazy" alt="" class="partner-logo"
+                                                style="filter: invert(0);">
+                                        </div>
+                                        <div id="w-node-_3b89a2bc-39de-b416-fa7d-e9db74861a1d-f023ed69" class="partner-item">
+                                            <img src="temw website/12.png" loading="lazy" alt="" class="partner-logo"
+                                                style="filter: invert(0);">
+                                        </div>
+                                        <div id="w-node-_3b89a2bc-39de-b416-fa7d-e9db74861a1d-f023ed69" class="partner-item">
+                                            <img src="temw website/21.png" loading="lazy" alt="" class="partner-logo"
+                                                style="filter: invert(0);">
+                                        </div>
 
                                 <div id="w-node-_3b89a2bc-39de-b416-fa7d-e9db74861a1d-f023ed69" class="partner-item">
-                                    <img src="temw website/21.png" loading="lazy" alt="" class="partner-logo"
+                                    <img src="temw website/14.png" loading="lazy" alt="" class="partner-logo"
                                         style="filter: invert(0);">
                                 </div>
                                 <div id="w-node-_5ffba236-0fa3-b3af-c93f-a68b7a4b823f-f023ed69" class="partner-item">
-                                    <img src="temw website/24.png" loading="lazy" alt="" class="partner-logo"
+                                    <img src="temw website/26.png" loading="lazy" alt="" class="partner-logo"
                                         style="filter: invert(0);">
                                 </div>
                                 <div id="w-node-_942e3725-bc49-7ef5-3058-7f6a93db2e1b-f023ed69" class="partner-item">
-                                    <img src="temw website/12.png" loading="lazy" alt="" class="partner-logo"
+                                    <img src="temw website/300374318_398874039026880_6624613955986407067_n.jpg" loading="lazy" alt="" class="partner-logo"
                                         style="filter: invert(0);">
                                 </div>
                                 <div id="w-node-bda69e52-15cb-3079-55f0-91116e361790-f023ed69" class="partner-item"><img
                                         src="temw website/26.png" loading="lazy" alt="" class="partner-logo"
                                         style="filter: invert(0);"></div>
                                 <div id="w-node-_9d2f11bb-37d4-b110-0c0d-5d091bd67b0d-f023ed69" class="partner-item">
-                                    <img src="temw website/279301264_4956484034417813_7035296213569531838_n.jpg"
+                                    <img src="temw website/bakers.png"
                                         loading="lazy" alt="" class="partner-logo" style="filter: invert(0);">
                                 </div>
                             </div>
                             <div style="transform: translate3d(-91.223%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;"
                                 class="w-layout-grid partner-component-grid">
                                 <div id="w-node-_4e44db52-71b9-f483-412b-970814c094c7-f023ed69" class="partner-item">
-                                    <img src="temw website/300374318_398874039026880_6624613955986407067_n.jpg"
+                                    <img src="temw website/c.png"
                                         loading="lazy" alt="" class="partner-logo" style="filter: invert(0);">
                                 </div>
                                 <div id="w-node-_4e44db52-71b9-f483-412b-970814c094c9-f023ed69" class="partner-item">
-                                    <img src="temw website/bakers.png" loading="lazy" alt="" class="partner-logo"
-                                        style="filter: invert(0);">
-                                </div>
-                                <div id="w-node-_4e44db52-71b9-f483-412b-970814c094cb-f023ed69" class="partner-item">
-                                    <img src="temw website/c.png" loading="lazy" alt="" class="partner-logo"
-                                        style="filter: invert(0);">
-                                </div>
-                                <div id="w-node-_4e44db52-71b9-f483-412b-970814c094cd-f023ed69" class="partner-item">
                                     <img src="temw website/d.png" loading="lazy" alt="" class="partner-logo"
                                         style="filter: invert(0);">
                                 </div>
-                                <div id="w-node-_4e44db52-71b9-f483-412b-970814c094cf-f023ed69" class="partner-item">
+                                
+                                <div id="w-node-_4e44db52-71b9-f483-412b-970814c094cf-f023ed69" class="partner-item"style="transform: translate3d(-91.223%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;">
                                     <img src="temw website/Flagship24 (1).png" loading="lazy" alt=""
                                         class="partner-logo" style="filter: invert(0);">
                                 </div>
-                                <div id="w-node-_4e44db52-71b9-f483-412b-970814c094d1-f023ed69" class="partner-item">
+                                <div id="w-node-_4e44db52-71b9-f483-412b-970814c094d1-f023ed69" class="partner-item"style="transform: translate3d(-91.223%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;">
                                     <img src="temw website/jpa post 2.png" loading="lazy" alt="" class="partner-logo"
                                         style="filter: invert(0);">
                                 </div>
@@ -664,22 +736,8 @@
                                     <img src="temw website/SAPNA Décorh.png" loading="lazy" alt="" class="partner-logo"
                                         style="filter: invert(0);">
                                 </div>
-                                <div id="w-node-_00f373c5-cf9a-ed34-fc5a-a7e4a1736df3-f023ed69" class="partner-item">
-                                    <img src=""
-                                        loading="lazy" alt="" class="partner-logo" style="filter: invert(0);">
-                                </div>
-                                <div id="w-node-_00f373c5-cf9a-ed34-fc5a-a7e4a1736df5-f023ed69" class="partner-item">
-                                    <img src="https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/665f1c38f13ff187d8add1d7_Umbrella.svg"
-                                        loading="lazy" alt="" class="partner-logo" style="filter: invert(0);">
-                                </div>
-                                <div id="w-node-_00f373c5-cf9a-ed34-fc5a-a7e4a1736df7-f023ed69" class="partner-item">
-                                    <img src="https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/665f1c38695f75377abb99ba_Monaco.svg"
-                                        loading="lazy" alt="" class="partner-logo" style="filter: invert(0);">
-                                </div>
-                                <div id="w-node-_00f373c5-cf9a-ed34-fc5a-a7e4a1736df9-f023ed69" class="partner-item">
-                                    <img src="https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/665f1c38275d8d002fd23178_Amsterdam.svg"
-                                        loading="lazy" alt="" class="partner-logo" style="filter: invert(0);">
-                                </div>
+                               
+                               
                             </div>
                         </div>
                     </div> -->
@@ -1182,6 +1240,18 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/js/webflow.7dc66dbb1.js"
         type="text/javascript"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider');
+    const images = slider.querySelectorAll('img');
+    
+    // Clone images to create the illusion of an infinite loop
+    images.forEach(img => {
+        const clone = img.cloneNode(true);
+        slider.appendChild(clone);
+    });
+});
+        </script>
 </body>
 
 </html>
