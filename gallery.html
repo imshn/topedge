@@ -1207,23 +1207,23 @@
           </video>
       </div>
       <div class="gallery-video">
-        <video autoplay muted loop>
-          <source src="temw website/video-1.mp4" type="video/mp4">
+        <video autoplay muted loop >
+          <source src="temw website/video-1.mp4" type="video/mp4" loading="lazy" controls>
         </video>
     </div>
     <div class="gallery-video">
       <video autoplay muted loop>
-        <source src="temw website/video-2.mp4" type="video/mp4">
+        <source src="temw website/video-2.mp4" type="video/mp4"loading="lazy" controls>
       </video>
   </div>
   <div class="gallery-video">
     <video autoplay muted loop>
-      <source src="temw website/video-3.mp4" type="video/mp4">
+      <source src="temw website/video-3.mp4" type="video/mp4" loading="lazy" controls>
     </video>
 </div>
 <div class="gallery-video">
   <video autoplay muted loop>
-    <source src="temw website/video-4.mp4" type="video/mp4">
+    <source src="temw website/video-4.mp4" type="video/mp4"loading="lazy" controls>
   </video>
 </div>
         <!-- <div class="gallery-item">
@@ -1564,7 +1564,84 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.prod.website-files.com/664898738f1fcda8f023ed65/js/webflow.7dc66dbb1.js"
     type="text/javascript"></script>
-
+    <script>
+      $(document).ready(function() {
+          // Simulated content data
+          const contentData = [
+             
+              { type: 'video', src: 'temw website/video-5.mp4' },
+              { type: 'video', src: 'temw website/video-1.mp4' }
+              { type: 'video', src: 'temw website/video-2.mp4' }
+              { type: 'video', src: 'temw website/video-3.mp4' }
+              { type: 'video', src: 'temw website/video-4.mp4' }
+          ];
+  
+          let loadedItems = 0;
+  
+          function loadNextItem() {
+              if (loadedItems >= contentData.length) return;
+  
+              const item = contentData[loadedItems];
+              let $element;
+  
+              if (item.type === 'text') {
+                  $element = $('<p>').text(item.content);
+              } else if (item.type === 'video') {
+                  $element = $(document.importNode($('#videoTemplate').prop('content'), true).firstElementChild);
+                  $element.find('source').attr('data-src', item.src);
+              }
+  
+              $('#content').append($element);
+              loadedItems++;
+  
+              // Use setTimeout to simulate asynchronous loading
+              setTimeout(() => {
+                  $element.addClass('lazy-load');
+                  lazyLoadVideo($element);
+                  $element.css('opacity', 1);
+                  loadNextItem();
+              }, 100);
+          }
+  
+          function lazyLoadVideo($container) {
+              const $video = $container.find('video');
+              const $source = $video.find('source');
+              const $placeholder = $container.find('.loading-placeholder');
+  
+              const observer = new IntersectionObserver((entries) => {
+                  entries.forEach(entry => {
+                      if (entry.isIntersecting) {
+                          $source.attr('src', $source.data('src'));
+                          $video.load();
+                          $placeholder.hide();
+                          $video.show();
+                          observer.unobserve(entry.target);
+                      }
+                  });
+              }, { rootMargin: '0px 0px 200px 0px' });
+  
+              observer.observe($container[0]);
+          }
+  
+          // Start loading content
+          loadNextItem();
+  
+          // Preload resources
+          $(window).on('load', function() {
+              // Preload next video
+              if (loadedItems < contentData.length) {
+                  const nextVideo = contentData.slice(loadedItems).find(item => item.type === 'video');
+                  if (nextVideo) {
+                      $('<link>').attr({
+                          rel: 'preload',
+                          as: 'video',
+                          href: nextVideo.src
+                      }).appendTo('head');
+                  }
+              }
+          });
+      });
+      </script>
    
 </body>
 
