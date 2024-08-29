@@ -565,6 +565,47 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+
+          .slider-container {
+            position: relative;
+            width:100%;
+            max-width:700px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            flex: 0 0 100%;
+            display: flex;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .video-wrapper {
+            width: 50%;
+        }
+        video {
+            width: 100%;
+            height: 500px;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            z-index: 10;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+
   </style>
   <script type="text/javascript">
     !(function (o, c) {
@@ -1152,7 +1193,7 @@
                       </div>
                     </div> -->
                   </nav>
-                  <div class="menu-button w-nav-button" style="-webkit-user-select: text" aria-label="menu"
+                  <div class="menu-button w-nav-button" style="user-select: text" aria-label="menu"
                     role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu"
                     aria-expanded="false">
                     <div class="menu-button-flex">
@@ -1200,6 +1241,27 @@
           </div>
         </div>
       </header>
+
+
+      <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <div class="video-wrapper"><video src="temw website/video-5.mp4" autoplay loop muted playsinline></video></div>
+                <div class="video-wrapper"><video src="temw website/video-2.mp4" autoplay loop muted playsinline></video></div>
+            </div>
+            <div class="slide">
+                <div class="video-wrapper"><video src="temw website/video-3.mp4" autoplay loop muted playsinline></video></div>
+                <div class="video-wrapper"><video src="temw website/video-4.mp4" autoplay loop muted playsinline></video></div>
+            </div>
+            <div class="slide">
+                <div class="video-wrapper"><video src="temw website/video-1.mp4" autoplay loop muted playsinline></video></div>
+                <!-- Add another video or placeholder here if you have a 6th video -->
+            </div>
+        </div>
+        <a href="#" class="arrow prev">&lt;</a>
+        <a href="#" class="arrow next">&gt;</a>
+    </div>
+<!--       
       <div class="gallery">
         <div class="gallery-video">
           <video autoplay muted loop>
@@ -1225,7 +1287,11 @@
   <video autoplay muted loop>
     <source src="temw website/video-4.mp4" type="video/mp4"loading="lazy" controls>
   </video>
-</div>
+</div> -->
+
+
+
+
         <!-- <div class="gallery-item">
             <img src="temw website/12.png" >
         </div>
@@ -1245,7 +1311,8 @@
             <img src="temw website/12.png" alt="Woman at eye chart">
         </div> -->
 
-    </div>
+    <!-- </div> -->
+
    <!-- <section>
     <div class="gallery">
         <div class="item">
@@ -1643,6 +1710,45 @@
       });
       </script>
    
+   <script>
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const videos = document.querySelectorAll('video');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        slider.style.transform = `translateX(-${index * 100}%)`;
+        currentIndex = index;
+    }
+
+    prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        showSlide(currentIndex - 1);
+    });
+    nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        showSlide(currentIndex + 1);
+    });
+
+    function autoplay() {
+        showSlide(currentIndex + 1);
+    }
+
+    // Start autoplay
+    let autoplayInterval = setInterval(autoplay, 10000); // Change slide every 10 seconds
+
+    // Pause autoplay when hovering over the slider
+    slider.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+    slider.addEventListener('mouseleave', () => autoplayInterval = setInterval(autoplay, 10000));
+
+    // Initial slide
+    showSlide(0);
+</script>
+
 </body>
 
 </html>
