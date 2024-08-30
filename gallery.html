@@ -65,14 +65,15 @@
     .gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
+            height: 850px;
         }
         .gallery-item {
             position: relative;
             overflow: hidden;
-            border-radius: 8px;
+            border-radius: 2px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .gallery-item img {
@@ -91,39 +92,36 @@
                 grid-template-columns: 1fr;
             }
         }
-
         .gallery-container {
-            max-width: 500px;
+            max-width: 800px;
             margin: 0 auto;
-            position: relative;
-        }
-        .video-slider {
-            display: flex;
             overflow: hidden;
         }
+        .gallery-slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
         .video-item {
-            flex: 0 0 100%;
-           
+            flex: 0 0 50%;
+            padding: 10px;
+            box-sizing: border-box;
         }
         video {
-            width: 100px;
-            height: 10%;
+            width: 100%;
+            height: 500px;
+      
         }
-        .nav-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            padding: 10px;
+        .navigation {
+            text-align: center;
+            margin-top: 2px;
+        }
+        button {
+            padding: 10px 20px;
             cursor: pointer;
-        }
-        .prev {
-            left: 10px;
-        }
-        .next {
-            right: 10px;
+            color: white;
+            background-color: tomato;
+            margin-bottom: 10px;
+            margin-right: 20px;
         }
   </style>
   <script type="text/javascript">
@@ -773,62 +771,72 @@
                                                             
         <div class="gallery-container">
         <!-- videos start -->
-            <div class="video-slider">
-                <video class="video-item" controls>
-                    <source src="temw website/video-5.mp4" type="video/mp4">
-                  
+        <div class="gallery-container">
+          <div class="gallery-slider">
+              <div class="video-item">
+                  <video controls>
+                      <source src="temw website/video-5.mp4" type="video/mp4">
                   </video>
-                  <video class="video-item" controls>
-                    <source src="temw website/video-4.mp4" type="video/mp4">
-                  
+              </div>
+              <div class="video-item">
+                  <video controls>
+                      <source src="temw website/video-1.mp4" type="video/mp4">
                   </video>
-                  <video class="video-item" controls>
-                    <source src="temw website/video-3.mp4" type="video/mp4">
-                  
+              </div>
+              <div class="video-item">
+                  <video controls>
+                      <source src="temw website/video-2.mp4" type="video/mp4">
                   </video>
-                  <video class="video-item" controls>
-                    <source src="temw website/video-2.mp4" type="video/mp4">
-                  
+              </div>
+              <div class="video-item">
+                  <video controls>
+                      <source src="temw website/video-3.mp4" type="video/mp4">
                   </video>
-                  <video class="video-item" controls>
-                    <source src="temw website/video-1.mp4" type="video/mp4">
-                  
+              </div>
+              <div class="video-item">
+                  <video controls>
+                      <source src="temw website/video-4.mp4" type="video/mp4">
                   </video>
-                  <video class="video-item" controls>
-                    <source src="temw website/video-3.mp4" type="video/mp4">
+              </div>
+              <div class="video-item">
+                  <video controls>
+                      <source src="temw website/video-6.mp4" type="video/mp4">
                   </video>
-            </div>
-            <button class="nav-button prev">&#10094;</button>
-            <button class="nav-button next">&#10095;</button>
-        </div>
+              </div>
+          </div>
+      </div>
+      <div class="navigation">
+          <button onclick="prevSlide()">Previous</button>
+          <button onclick="nextSlide()">Next</button>
+      </div>
         <!-- video end -->
         <div class="gallery">
             <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Dental procedure">
+                <img src="temw website/12.png" alt="Dental procedure">
             </div>
             <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Eye examination equipment">
+                <img src="temw website/13.png" alt="Eye examination equipment">
             </div>
             <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Hospital hallway">
+                <img src="temw website/14.png" alt="Hospital hallway">
             </div>
             <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Optical store display">
+                <img src="temw website/15.png" alt="Optical store display">
             </div>
             <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Medical center entrance">
+                <img src="temw website/16.png" alt="Medical center entrance">
             </div>
             <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Pharmacy storefront">
+                <img src="temw website/17.png" alt="Pharmacy storefront">
             </div>
             <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Pharmacy storefront">
+                <img src="temw website/18.png" alt="Pharmacy storefront">
             </div>
             <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Pharmacy storefront">
+                <img src="temw website/19.png" alt="Pharmacy storefront">
             </div>
             <div class="gallery-item">
-                <img src="/api/placeholder/400/300" alt="Pharmacy storefront">
+                <img src="temw website/23.png" alt="Pharmacy storefront">
             </div>
         </div>
        
@@ -1110,19 +1118,24 @@
     type="text/javascript"></script>
 
     <script>
-        const slider = document.querySelector('.video-slider');
-        const prevButton = document.querySelector('.prev');
-        const nextButton = document.querySelector('.next');
-        let currentIndex = 0;
+      const slider = document.querySelector('.gallery-slider');
+      let currentSlide = 0;
+      const totalSlides = 3; // Total number of slides (6 videos / 2 per slide)
 
-        function slideVideo(direction) {
-            currentIndex = (currentIndex + direction + 6) % 6;
-            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
+      function showSlide(slideIndex) {
+          slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+      }
 
-        prevButton.addEventListener('click', () => slideVideo(-1));
-        nextButton.addEventListener('click', () => slideVideo(1));
-    </script>
+      function nextSlide() {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          showSlide(currentSlide);
+      }
+  </script>
 </body>
 
 </html>
