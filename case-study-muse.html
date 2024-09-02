@@ -30,7 +30,58 @@
     <meta content="Webflow" name="generator" />
     <link href="./markething.webflow.d9943c7a0.css"
         rel="stylesheet" type="text/css" />
-   
+        <style>
+
+            .slider {
+           position: relative;
+           width: 150%;
+           max-width:1000px; /* Adjust based on your design */
+           overflow: hidden;
+           
+       }
+       
+       .slides {
+           display: flex;
+           transition: transform 0.5s ease-in-out;
+          
+       }
+       
+       .slide {
+           display: flex;
+           justify-content: space-between;
+           min-width: 100%; /* Takes up full width of the slider */
+           box-sizing: border-box;
+           align-items: center;
+       
+       }
+       
+       .slide img{
+           width: 1000px; /* Adjust the width to fit 2 images per slide */
+           border: 2px solid #fff; /* Optional: Add a border between images */
+           height: 350px;
+       }
+       
+       
+       .prev, .next {
+           position: absolute;
+           top: 50%;
+           transform: translateY(-50%);
+           background-color: rgba(0, 0, 0, 0.5);
+           color: white;
+           border: none;
+           padding: 16px;
+           cursor: pointer;
+       }
+       
+       .prev {
+           left: 0;
+       }
+       
+       .next {
+           right: 0;
+       }
+       
+               </style>
 </head>
 
 <body>
@@ -579,7 +630,41 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="spacer-xlarge"></div><img
+                            <div>
+                                <p style="font-size: 20px; margin-top: 100px; margin-bottom: 50px; font-weight: 700; ">
+                                    Our AD Campaign Results :
+                                </p>
+                            </div>
+                          
+                            <div class="slider">
+                                <div class="slides">
+                                    <!-- Each slide contains two images -->
+                                    <div class="slide">
+                                        <a href="adss-1.jpg" target="_blank">
+                                            <img src="adss-1.jpg" alt="Image 1"class="img-left">
+                                        </a>
+                                        
+                                    </div>
+                                    <div class="slide">
+                                        <a href="adss-2.jpg" target="_blank">
+                                            <img src="adss-2.jpg" alt="Image 4" class="img-right">
+                                        </a>
+                                    </div>
+                                    <div class="slide">
+                                        <a href="adss-3.jpg" target="_blank">
+                                            <img src="adss-3.jpg" alt="Image 4" class="img-right">
+                                        </a>
+                                    </div>
+                                   
+                                    <!-- Add more slides as needed -->
+                                </div>
+                                <!-- Navigation buttons -->
+                                <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+                                <a class="next" onclick="moveSlide(1)">&#10095;</a>
+                            </div>
+                        </div>
+                    </div>
+                            <!-- <div class="spacer-xlarge"></div><img
                                 src="https://cdn.prod.website-files.com/664898738f1fcda8f023ed72/66676a79bba699ee8d246593_case-study-img04.webp"
                                 loading="lazy" alt="Muse"
                                 sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 1279px) 92vw, 1024px"
@@ -647,7 +732,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </section>
             <section class="section-next-case">
                 <div class="padding-global">
@@ -678,9 +763,9 @@
                                         </div>
                                         <div class="nav-text-wrapper">
                                             <div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                                class="nav-text">Speed</div>
+                                                class="nav-text">Baker's Louge</div>
                                             <div style="-webkit-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
-                                                class="nav-text">Speed</div>
+                                                class="nav-text">Baker's Louge</div>
                                         </div>
                                     </div>
                                     <div class="underline-nav-link">
@@ -807,6 +892,25 @@
         crossorigin="anonymous"></script>
     <script src="./webflow.7dc66dbb1.js"
         type="text/javascript"></script>
+        
+        <script>
+            let currentSlide = 0;
+
+function moveSlide(step) {
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+
+    document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+// Optional: Autoplay
+// setInterval(() => {
+//     moveSlide(1);
+// }, 3000); // Change slide every 3 seconds
+
+        </script>
 </body>
 
 </html>
