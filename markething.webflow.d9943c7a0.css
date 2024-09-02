@@ -7162,6 +7162,8 @@ blockquote {
 
   .heading-style-h1 {
     font-size: 4rem;
+    margin-top: 100px;
+    
   }
 
   .checkout-title {
@@ -7699,6 +7701,7 @@ blockquote {
   .footer-logo {
     height: 1.75rem;
     font-size: 2.25rem;
+    margin-top: 900px;
   }
 
   .footer-top-grid {
@@ -7725,7 +7728,7 @@ blockquote {
 
   .footer-icon {
     height: 1.75rem;
-    margin-top: -1px;
+    margin-top: 900px;
   }
 
   .cta-content {
