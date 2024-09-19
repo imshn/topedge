@@ -5739,7 +5739,8 @@ blockquote {
 .row-about-image {
   grid-column-gap: 4rem;
   grid-row-gap: 4rem;
-  width: 100%;
+  width: 150%;
+  font-size: 25px;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -5748,8 +5749,6 @@ blockquote {
 .row-image-item {
   flex: none;
   width: 100%;
-  padding-top: 5rem;
-  padding-bottom: 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -7562,7 +7561,7 @@ blockquote {
   }
 
   .padding-section-large {
-    padding-top: 6rem;
+    padding-top: 0rem;
     padding-bottom: 6rem;
   }
 
