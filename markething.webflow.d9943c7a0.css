@@ -5739,8 +5739,7 @@ blockquote {
 .row-about-image {
   grid-column-gap: 4rem;
   grid-row-gap: 4rem;
-  width: 150%;
-  font-size: 25px;
+  width: 100%;
   display: flex;
   position: relative;
   overflow: hidden;
