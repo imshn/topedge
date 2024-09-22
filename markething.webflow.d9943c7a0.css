@@ -8384,3 +8384,29 @@ blockquote {
   font-style: italic;
   font-display: swap;
 }
+
+
+@media (max-width: 800px) {
+  .container-large-about {
+    flex-direction: column;
+  }
+  .img-about {
+    max-width: 100%;
+   padding-bottom:10rem ;
+  }
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 768px) {
+  .inner-sticky {
+    padding-bottom: 25rem !important; /* Decrease or remove bottom margin for mobile */
+  }
+
+}
+
+@media (max-width: 800px) {
+  .container-large-contact {
+    flex-direction: column;
+  }
+}
+
