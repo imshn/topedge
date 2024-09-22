@@ -6152,6 +6152,7 @@ blockquote {
 .member-content-block {
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 1rem;
 }
 
 .blog-component-grid {
