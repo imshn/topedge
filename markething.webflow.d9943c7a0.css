@@ -8410,3 +8410,9 @@ blockquote {
   }
 }
 
+@media (max-width: 800px) {
+  .slider-container {
+    animation: slide 75s linear infinite;
+  }
+}
+
