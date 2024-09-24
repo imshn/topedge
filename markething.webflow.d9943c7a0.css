@@ -4104,6 +4104,9 @@ blockquote {
   text-align: center;
 }
 
+.w-webflow-badge{
+ display: none; 
+}
 .margin-xsmall {
   margin: .5rem;
 }
@@ -4831,7 +4834,7 @@ blockquote {
   width: 26rem;
   height: 26rem;
   position: absolute;
-  transform: translate3d(9.2rem, 0, 9.2rem)rotateX(0)rotateY(-45deg)rotateZ(0);
+  transform: translate3d(9.2rem, 0, 9.2rem)rotateX(0)rotateY(-45deg)rotateZ(0) scaleX(-1);
 }
 
 ._3d-wrapper {
@@ -4872,7 +4875,7 @@ blockquote {
   height: 26rem;
   display: flex;
   position: absolute;
-  transform: translate(13rem)rotate(0);
+  transform: translate(13rem)rotate(0) scaleX(-1);
 }
 
 .face-03 {
@@ -4887,7 +4890,7 @@ blockquote {
   height: 26rem;
   display: flex;
   position: absolute;
-  transform: translate3d(0, 0, -13rem)rotateX(0)rotateY(90deg)rotateZ(0);
+  transform: translate3d(0, 0, -13rem)rotateX(0)rotateY(90deg)rotateZ(0) scaleX(-1);
 }
 
 .face-05 {
@@ -4914,7 +4917,7 @@ blockquote {
   width: 26rem;
   height: 26rem;
   position: absolute;
-  transform: translate3d(9.2rem, 0, -9.2rem)rotateX(0)rotateY(45deg)rotateZ(0);
+  transform: translate3d(9.2rem, 0, -9.2rem)rotateX(0)rotateY(45deg)rotateZ(0) scaleX(-1);
 }
 
 .face-01 {
@@ -4929,7 +4932,7 @@ blockquote {
   width: 26rem;
   height: 26rem;
   position: absolute;
-  transform: rotateX(0)rotateY(-90deg)rotateZ(0)translate(13rem);
+  transform: rotateX(0)rotateY(-90deg)rotateZ(0)translate(13rem) ;
 }
 
 .face-07 {
@@ -5564,7 +5567,7 @@ blockquote {
   grid-template-rows: auto;
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
-  margin-bottom: 18rem;
+  margin-bottom: 4rem;
 }
 
 .footer-flex-item {
@@ -8417,7 +8420,7 @@ blockquote {
 
 @media (max-width: 800px) {
   .slider-container {
-    animation: slide 75s linear infinite;
+    animation: slide 8s linear infinite;
   }
 }
 
