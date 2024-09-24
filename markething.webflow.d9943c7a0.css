@@ -270,6 +270,7 @@ img {
   vertical-align: middle;
   max-width: 100%;
   display: inline-block;
+ 
 }
 
 html.w-mod-touch * {
@@ -7109,6 +7110,7 @@ blockquote {
   .padding-global {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+   
   }
 
   .text-style-nowrap {
@@ -7509,6 +7511,7 @@ blockquote {
 
   .heading-style-h2 {
     font-size: 2.75rem;
+    margin-top: 100px;
   }
 
   .heading-style-h2.case-title {
@@ -7561,7 +7564,7 @@ blockquote {
 
   .padding-section-large {
     padding-top: 0rem;
-    padding-bottom: 6rem;
+  
   }
 
   .margin-bottom {
@@ -7699,7 +7702,7 @@ blockquote {
   .footer-logo {
     height: 1.75rem;
     font-size: 2.25rem;
-    margin-top: 900px;
+    margin-top: 500px;
   }
 
   .footer-top-grid {
@@ -8392,14 +8395,16 @@ blockquote {
   }
   .img-about {
     max-width: 100%;
-   padding-bottom:10rem ;
+   padding-bottom:5rem ;
+   padding-top: 2rem;
   }
+ 
 }
 
 /* Mobile devices */
 @media only screen and (max-width: 768px) {
   .inner-sticky {
-    padding-bottom: 25rem !important; /* Decrease or remove bottom margin for mobile */
+    margin-top: -25rem !important; /* Decrease or remove bottom margin for mobile */
   }
 
 }
@@ -8416,3 +8421,23 @@ blockquote {
   }
 }
 
+@media (max-width: 800px) {
+  A.brand-footer-link  {
+    margin-top: -30rem !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .heading-style-h2-about  {
+    margin-top: 500px;
+  }
+}
+
+
+
+
+@media (max-width: 800px) {
+  .contact-form ,.form-group, input  {
+  width: 100% !important;
+  }
+}
