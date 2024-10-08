@@ -8489,3 +8489,10 @@ blockquote {
  }
 
  
+ @media (max-width: 800px) {
+  .img-about img{
+    margin-top: 0rem !important;
+    margin-right: 0rem !important;
+    height: 350px !important;
+  }
+ }
