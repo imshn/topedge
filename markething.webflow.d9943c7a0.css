@@ -7261,7 +7261,7 @@ blockquote {
   }
 
   .nav-text {
-    font-size: 2.75rem;
+    font-size: 3rem;
   }
 
   .nav-link-inner-flex {
@@ -7651,6 +7651,7 @@ blockquote {
 
   .nav-wrapper {
     padding-left: 2rem;
+    padding-bottom: 8rem;
   }
 
   .nav-link-inner-flex {
