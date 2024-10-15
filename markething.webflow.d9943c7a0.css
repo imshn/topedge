@@ -7261,7 +7261,7 @@ blockquote {
   }
 
   .nav-text {
-    font-size: 3rem;
+    font-size: 25px;
   }
 
   .nav-link-inner-flex {
@@ -8496,4 +8496,51 @@ blockquote {
     margin-right: 0rem !important;
     height: 350px !important;
   }
+ }
+
+ .circlec {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ff4500;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.circlec-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ff4500;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10000;
+}
+
+ 
+@media (max-width: 800px) {
+  .circlec {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ff4500;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.circlec-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ff4500;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10000;
+}
  }
