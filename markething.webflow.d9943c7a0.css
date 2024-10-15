@@ -7261,7 +7261,7 @@ blockquote {
   }
 
   .nav-text {
-    font-size: 25px;
+    font-size: 50px;
   }
 
   .nav-link-inner-flex {
@@ -7317,6 +7317,7 @@ blockquote {
 
   .footer-logo {
     font-size: 2.5rem;
+    margin-top: 80rem;
   }
 
   .footer-top-grid {
@@ -7707,10 +7708,10 @@ blockquote {
     height: 40vh;
   }
 
-  .footer-logo {
+  .footer-logo-1 {
     height: 1.75rem;
     font-size: 2.25rem;
-    margin-top: 1000px;
+    margin-top: 100rem;
   }
 
   .footer-top-grid {
@@ -8432,7 +8433,7 @@ blockquote {
 
 @media (max-width: 800px) {
   A.brand-footer-link  {
-    margin-top: -65rem !important;
+    margin-top: -85rem !important;
   }
 }
 
@@ -8507,8 +8508,7 @@ blockquote {
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
-}
-
+ }
 .circlec-dot {
   width: 8px;
   height: 8px;
@@ -8520,27 +8520,9 @@ blockquote {
   z-index: 10000;
 }
 
- 
-@media (max-width: 800px) {
-  .circlec {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #ff4500;
-  border-radius: 50%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 9999;
-}
 
-.circlec-dot {
-  width: 8px;
-  height: 8px;
-  background-color: #ff4500;
-  border-radius: 50%;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 10000;
-}
+@media (max-width: 746px) {
+  .circlec-dot .circlec-dot {
+  visibility: none;
+  }
  }
