@@ -8502,7 +8502,7 @@ blockquote {
  .circlec {
   width: 40px;
   height: 40px;
-  border: 2px solid #ff4500;
+  border: 1.90px solid #e56f40;
   border-radius: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -8512,7 +8512,7 @@ blockquote {
 .circlec-dot {
   width: 8px;
   height: 8px;
-  background-color: #ff4500;
+  background-color: #e56f40;
   border-radius: 50%;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -8521,8 +8521,14 @@ blockquote {
 }
 
 
-@media (max-width: 746px) {
-  .circlec-dot .circlec-dot {
-  visibility: none;
+@media (max-width: 800px) {
+  .circlec-dot{
+  display:none ;
+  }
+ }
+
+@media (max-width: 800px) {
+  .circlec{
+  display:none ;
   }
  }
