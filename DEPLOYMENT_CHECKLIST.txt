@@ -1,0 +1,152 @@
+═══════════════════════════════════════════════════════════════════════
+  TOP EDGE MEDIAWORKS — SEO/AEO OPTIMIZATION DEPLOYMENT CHECKLIST
+═══════════════════════════════════════════════════════════════════════
+
+BEFORE DEPLOYING TO PRODUCTION, COMPLETE THIS CHECKLIST:
+
+1. INSERT REAL ANALYTICS ID
+   ☐ Replace all instances of "G-XXXXXXXXXX" with your Google Analytics 4
+     Measurement ID
+   ☐ Where to find it: Google Analytics 4 > Admin > Data Streams > Web Stream >
+     Measurement ID (format: G-[10 alphanumeric chars])
+   ☐ Files affected: ALL HTML files have 3+ instances each
+   ☐ Verification: Open index.html and search for "G-" — should only show your
+     real ID, no XXXXXXXXXX
+
+2. ADD GOOGLE SEARCH CONSOLE VERIFICATION
+   ☐ Go to Google Search Console > Add Property > Enter https://www.topedgemediaworks.in
+   ☐ Choose verification method "HTML tag"
+   ☐ Copy the verification code (format:
+     <meta name="google-site-verification" content="[random-string]">)
+   ☐ In index.html, replace the line with name="google-site-verification"
+     and PLACEHOLDER with your actual code
+   ☐ Verification: Save index.html and check that the meta tag appears in browser
+
+3. TEST LOCALLY BEFORE DEPLOYING
+   ☐ Open a terminal and run: python3 -m http.server 8000
+   ☐ Open browser to http://localhost:8000
+   ☐ Click through each main page (index, about, service, packages, cases, contact)
+   ☐ For each page, visually confirm:
+     - Layout looks identical to before (no visual changes)
+     - All images load correctly
+     - All links work
+   ☐ Right-click > Inspect on a page and search for "canonical" — should see one
+     canonical link
+   ☐ Right-click > Inspect and search for "BreadcrumbList" — should see JSON-LD
+     schema
+
+4. VALIDATE XML STRUCTURES
+   ☐ Validate robots.txt:
+     - Use https://www.seobility.net/en/robotsfilevalidator/
+     - Or manually check syntax looks correct
+   ☐ Validate sitemap.xml:
+     - Use https://www.xml-sitemaps.com/validate-xml-sitemap.html
+     - Should show all 11 URLs with www.topedgemediaworks.in domain
+   ☐ Verify llms.txt:
+     - Open in a text editor — should be plain text, readable, ~26 lines
+
+5. DEPLOY TO PRODUCTION
+   ☐ Connect to your web server / hosting (Webflow, Vercel, etc.)
+   ☐ Upload the following files to the root directory:
+     - robots.txt (new)
+     - sitemap.xml (new)
+     - llms.txt (new)
+     - index.html (modified)
+     - about.html (modified)
+     - service.html (modified)
+     - packages.html (modified)
+     - cases.html (modified)
+     - cases-details-1.html (modified)
+     - cases-details-2.html (modified)
+     - cases-details-3.html (modified)
+     - cases-details-4.html (modified)
+     - contact.html (modified)
+     - gallery.html (modified)
+     - blog.html (modified)
+   ☐ Clear any cache (browser cache, CDN cache if applicable)
+   ☐ Wait 5-10 minutes for changes to propagate
+
+6. VERIFY ON LIVE SITE
+   ☐ Visit https://www.topedgemediaworks.in/robots.txt — should display file contents
+   ☐ Visit https://www.topedgemediaworks.in/sitemap.xml — should display XML
+   ☐ Visit https://www.topedgemediaworks.in/llms.txt — should display plain text
+   ☐ Visit https://topedgemediaworks.in/ (homepage) in incognito mode
+   ☐ Right-click > View Page Source and search for:
+     - "canonical" → should see one unique tag
+     - "ga/js" → should see GA4 gtag script with YOUR ID (not XXXXXXXXXX)
+     - "google-site-verification" → should see your verification code
+     - "BreadcrumbList" → should see JSON-LD schema
+
+7. SUBMIT TO GOOGLE SEARCH CONSOLE
+   ☐ Go to https://search.google.com/search-console
+   ☐ Sign in with your account
+   ☐ Click "URL inspection" at the top
+   ☐ Enter: https://www.topedgemediaworks.in
+   ☐ Click "Request Indexing" (blue button)
+   ☐ Go to Sitemaps > Add a new sitemap
+   ☐ Enter: sitemap.xml
+   ☐ Click "Submit"
+   ☐ Wait for confirmation (usually within 24 hours)
+
+8. MONITOR PROGRESS (ONGOING)
+   ☐ Check Google Search Console daily for 1 week:
+     - Coverage report → pages should change from "Not indexed" to "Indexed"
+     - Performance report → look for new organic search traffic
+   ☐ Check Google Analytics 4:
+     - Real-time report → confirm GA4 code is firing (visits should appear)
+     - Traffic sources → organic search should start appearing within 2-7 days
+   ☐ After 2 weeks, check if organic keywords are ranking in GSC > Performance
+
+9. POST-LAUNCH RECOMMENDATIONS
+   ☐ Write and publish 5-10 blog posts on high-value keywords:
+     - "Best digital marketing agency in Aurangabad"
+     - "How to do SEO for small businesses in India"
+     - "Facebook Ads vs Google Ads"
+     - etc.
+   ☐ Add blog posts to sitemap.xml and resubmit
+   ☐ Add client testimonials + Review schema
+   ☐ Add social media links to LocalBusiness schema
+   ☐ Monthly: check Search Console for keyword rankings and click-through rates
+
+═══════════════════════════════════════════════════════════════════════
+  SUPPORT & TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════════════
+
+If pages don't appear in Google Search Console after 2 weeks:
+  ☐ Check that robots.txt allows Googlebot (should be default)
+  ☐ Verify sitemap.xml is accessible at the root
+  ☐ Look for crawl errors in GSC > Coverage
+  ☐ Check server logs for 404 errors
+
+If GA4 is not tracking:
+  ☐ Open browser DevTools > Network tab
+  ☐ Reload page and look for a request to "collect" from
+    www.google-analytics.com
+  ☐ If missing, verify GA4 ID is correct (not XXXXXXXXXX)
+  ☐ Wait 24 hours for data to appear in GA4 dashboard
+
+If schema validation fails:
+  ☐ Use https://schema.org/validator to test each page
+  ☐ Most common issue: missing closing tags (check file wasn't corrupted
+    during upload)
+  ☐ Re-upload the HTML file and clear browser cache
+
+═══════════════════════════════════════════════════════════════════════
+  QUICK REFERENCE: WHAT CHANGED?
+═══════════════════════════════════════════════════════════════════════
+
+✓ Meta descriptions: Changed from 1,000-word duplicate to unique 150-char per page
+✓ Canonical tags: Added to all pages (was missing entirely)
+✓ Structured data: Added LocalBusiness, Service, BreadcrumbList schemas (was zero)
+✓ Alt text: Fixed 50+ generic/missing alt attributes to be descriptive
+✓ crawlability: Added robots.txt and sitemap.xml (were missing)
+✓ AEO: Created llms.txt for AI answer engine visibility (was missing)
+✓ Analytics: Added GA4 snippet to all pages (was missing)
+✓ Social: De-duplicated Open Graph / Twitter Card tags
+
+✗ NOT changed: Page layout, design, visible content, images, styling, JavaScript
+  (only <head> and alt attributes updated)
+
+═══════════════════════════════════════════════════════════════════════
+
+Questions? See SEO_AEO_OPTIMIZATION_REPORT.md for detailed documentation.
