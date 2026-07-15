@@ -185,6 +185,28 @@
       gtag('js', new Date());
       gtag('config', 'G-XXXXXXXXXX');
     </script>
+    <style>
+    :root {
+      --bg-primary: #ffffff;
+      --bg-secondary: #f8f9fa;
+      --text-primary: #1a1a1a;
+      --text-secondary: #666666;
+      --border-color: #e0e0e0;
+      --link-color: #667eea;
+    }
+    [data-theme="dark"] {
+      --bg-primary: #1a1a1a;
+      --bg-secondary: #2d2d2d;
+      --text-primary: #ffffff;
+      --text-secondary: #b0b0b0;
+      --border-color: #444444;
+      --link-color: #8b9cff;
+    }
+    body { background-color: var(--bg-primary); color: var(--text-primary); transition: background-color 0.3s ease, color 0.3s ease; }
+    a { color: var(--link-color); }
+    input, textarea, select { background-color: var(--bg-secondary); color: var(--text-primary); border-color: var(--border-color); }
+    [data-theme="dark"] img { opacity: 0.95; }
+    </style>
 </head>
 
 <body>
@@ -1071,6 +1093,7 @@
       });
     })();
   </script>
+  <script src="./theme-toggle.js"></script>
 </body>
 
 </html>
