@@ -1,4 +1,30 @@
 {
   "buildCommand": "echo 'Static site, no build needed'",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/blog/google-ads-vs-meta-ads",
+      "destination": "/blog-google-ads-vs-meta-ads.html"
+    },
+    {
+      "source": "/blog/how-to-start-google-ads",
+      "destination": "/blog-how-to-start-google-ads.html"
+    },
+    {
+      "source": "/:path",
+      "destination": "/:path.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/blog-01.html",
+      "destination": "/blog/google-ads-vs-meta-ads",
+      "permanent": true
+    },
+    {
+      "source": "/blog-02.html",
+      "destination": "/blog/how-to-start-google-ads",
+      "permanent": true
+    }
+  ]
 }
