@@ -1,0 +1,29 @@
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+Vercel CLI 54.14.5 (Node.js 24.14.1)
+
+  Directory       ~/Desktop/project/topedge
+
+Loading teams…
+Searching for existing projects…
+  Local settings detected in vercel.json:
+  Build Command: echo 'Static site, no build needed'
+  Output Directory: .
+
+  No framework detected. Default Project Settings:
+  Development Command: None
+  Install Command: `yarn install`, `pnpm install`, `npm install`, or `bun install`
+
+✓ Created         mohammed-shahnawazs-projects/topedge
+
+> Connecting GitHub repository: https://github.com/imshn/topedge
+> Connected
+Error: The `env` property in vercel.json needs to be an object
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│                     Update available! v54.14.5 ≫ v58.5.1                     │
+│   Changelog: https://github.com/vercel/vercel/releases/tag/vercel%4058.5.1   │
+│                   Run `npm i -g vercel@latest` to update.                    │
+│                                                                              │
+│             The latest update may fix any errors that occurred.              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
